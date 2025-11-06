@@ -1,0 +1,20 @@
+﻿.backtesting-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.backtesting-tabs button {
+  border: none;
+  background: rgba(15, 23, 42, 0.06);
+  color: #1f2937;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.backtesting-tabs button.is-active {
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  color: #f8fafc;
+}

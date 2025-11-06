@@ -1,0 +1,128 @@
+﻿.portfolio-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.portfolio-detail__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portfolio-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.portfolio-detail__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.portfolio-detail__grid .label {
+  display: block;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.strategy-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.strategy-card {
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(248, 250, 252, 0.85);
+  display: grid;
+  gap: 1rem;
+}
+
+.strategy-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.strategy-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.strategy-card th,
+.strategy-card td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.metrics-grid article {
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(29, 78, 216, 0.1) 100%);
+  padding: 1.25rem;
+  backdrop-filter: blur(4px);
+}
+
+.metrics-grid header {
+  margin-bottom: 0.75rem;
+}
+
+.metrics-grid dl {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.metrics-grid dt {
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.metrics-grid dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 0.6rem 0.5rem;
+}
+
+.text-success {
+  color: #0f766e;
+}
+
+.text-danger {
+  color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .portfolio-detail__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .portfolio-detail__actions {
+    width: 100%;
+  }
+}

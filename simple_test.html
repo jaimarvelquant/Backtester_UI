@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Backtest - Simple Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .results h3 {
+            margin-top: 0;
+        }
+        .error {
+            background-color: #f8d7da;
+            border-left-color: #dc3545;
+            color: #721c24;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: #e9ecef;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .tab.active {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Strategy Backtest Platform</h1>
+
+        <div class="status success">
+            ✅ All backend services are running! Ready to test backtest strategies.
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('simple')">Simple Backtest</div>
+            <div class="tab" onclick="showTab('tradingview')">TradingView Backtest</div>
+            <div class="tab" onclick="showTab('react')">React App</div>
+        </div>
+
+        <div id="simple" class="tab-content active">
+            <h2>Simple Backtest Configuration</h2>
+            <form id="simpleForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="simpleSymbol">Symbol:</label>
+                        <input type="text" id="simpleSymbol" value="NIFTY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="simpleStrategy">Strategy:</label>
+                        <select id="simpleStrategy">
+                            <option value="moving_average">Moving Average</option>
+                            <option value="rsi">RSI</option>
+                            <option value="macd">MACD</option>
+                            <option value="bollinger">Bollinger Bands</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="simpleStartDate">Start Date:</label>
+                        <input type="date" id="simpleStartDate" value="2023-01-01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="simpleEndDate">End Date:</label>
+                        <input type="date" id="simpleEndDate" value="2023-12-31" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="simpleCapital">Initial Capital:</label>
+                        <input type="number" id="simpleCapital" value="100000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="simpleQuantity">Quantity:</label>
+                        <input type="number" id="simpleQuantity" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="simpleTarget">Target (%):</label>
+                        <input type="number" step="0.1" id="simpleTarget" value="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="simpleStoploss">Stop Loss (%):</label>
+                        <input type="number" step="0.1" id="simpleStoploss" value="1" required>
+                    </div>
+                </div>
+                <button type="submit" id="simpleSubmit">Run Simple Backtest</button>
+            </form>
+        </div>
+
+        <div id="tradingview" class="tab-content">
+            <h2>TradingView Backtest Configuration</h2>
+            <form id="tvForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="tvSymbol">Symbol:</label>
+                        <input type="text" id="tvSymbol" value="NIFTY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tvStartDate">Start Date:</label>
+                        <input type="date" id="tvStartDate" value="2023-01-01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tvEndDate">End Date:</label>
+                        <input type="date" id="tvEndDate" value="2023-12-31" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tvCapital">Initial Capital:</label>
+                        <input type="number" id="tvCapital" value="100000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tvQuantity">Quantity:</label>
+                        <input type="number" id="tvQuantity" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tvTarget">Target (%):</label>
+                        <input type="number" step="0.1" id="tvTarget" value="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tvStoploss">Stop Loss (%):</label>
+                        <input type="number" step="0.1" id="tvStoploss" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="tvExit" checked>
+                            TradingView Exit
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" id="tvSubmit">Run TradingView Backtest</button>
+            </form>
+        </div>
+
+        <div id="react" class="tab-content">
+            <h2>React Web Application</h2>
+            <p>For the full-featured web application, you can access the React app:</p>
+            <div style="background: #e7f3ff; padding: 20px; border-radius: 5px; margin: 20px 0;">
+                <h3>🌐 React App Access:</h3>
+                <p><strong>URL:</strong> <a href="http://localhost:5173" target="_blank">http://localhost:5173</a></p>
+                <p><strong>Login:</strong> admin / admin (or any username/password)</p>
+                <p><strong>Features:</strong> Portfolio management, advanced backtest configuration, results visualization</p>
+            </div>
+            <button onclick="window.open('http://localhost:5173', '_blank')">Open React App</button>
+        </div>
+
+        <div id="results" style="display: none;"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:5000';
+
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function showResults(results, isError = false) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.style.display = 'block';
+            resultsDiv.className = isError ? 'results error' : 'results';
+
+            const title = isError ? '❌ Error' : '✅ Backtest Results';
+            const content = isError ?
+                `<h3>${title}</h3><pre>${JSON.stringify(results, null, 2)}</pre>` :
+                `<h3>${title}</h3>
+                 <p><strong>Status:</strong> ${results.status}</p>
+                 <p><strong>Symbol:</strong> ${results.data.symbol}</p>
+                 <p><strong>Strategy:</strong> ${results.data.strategy}</p>
+                 <p><strong>Total Trades:</strong> ${results.data.total_trades}</p>
+                 <p><strong>Profitable Trades:</strong> ${results.data.profitable_trades}</p>
+                 <p><strong>Win Rate:</strong> ${results.data.win_rate}%</p>
+                 <p><strong>Total P&L:</strong> ${results.data.total_pnl}</p>
+                 <p><strong>Max Profit:</strong> ${results.data.max_profit}</p>
+                 <p><strong>Max Loss:</strong> ${results.data.max_loss}</p>
+                 <h4>Trade Details:</h4>
+                 <pre>${JSON.stringify(results.data.trades, null, 2)}</pre>`;
+
+            resultsDiv.innerHTML = content;
+        }
+
+        function setLoading(isLoading, buttonId) {
+            const button = document.getElementById(buttonId);
+            button.disabled = isLoading;
+            button.textContent = isLoading ? 'Running...' : button.textContent.replace('Running...', 'Run');
+        }
+
+        document.getElementById('simpleForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            setLoading(true, 'simpleSubmit');
+
+            const params = {
+                symbol: document.getElementById('simpleSymbol').value,
+                strategy: document.getElementById('simpleStrategy').value,
+                startDate: document.getElementById('simpleStartDate').value,
+                endDate: document.getElementById('simpleEndDate').value,
+                capital: parseFloat(document.getElementById('simpleCapital').value),
+                quantity: parseInt(document.getElementById('simpleQuantity').value),
+                target: parseFloat(document.getElementById('simpleTarget').value),
+                stoploss: parseFloat(document.getElementById('simpleStoploss').value)
+            };
+
+            try {
+                const response = await fetch(`${API_BASE}/api/backtest/run`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(params)
+                });
+
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    showResults(result);
+                } else {
+                    showResults(result, true);
+                }
+            } catch (error) {
+                showResults({ error: error.message }, true);
+            } finally {
+                setLoading(false, 'simpleSubmit');
+            }
+        });
+
+        document.getElementById('tvForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            setLoading(true, 'tvSubmit');
+
+            const params = {
+                symbol: document.getElementById('tvSymbol').value,
+                startDate: document.getElementById('tvStartDate').value,
+                endDate: document.getElementById('tvEndDate').value,
+                capital: parseFloat(document.getElementById('tvCapital').value),
+                quantity: parseInt(document.getElementById('tvQuantity').value),
+                target: parseFloat(document.getElementById('tvTarget').value),
+                stoploss: parseFloat(document.getElementById('tvStoploss').value),
+                tvExitApplicable: document.getElementById('tvExit').checked
+            };
+
+            try {
+                const response = await fetch(`${API_BASE}/api/tradingview/run`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(params)
+                });
+
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    showResults(result);
+                } else {
+                    showResults(result, true);
+                }
+            } catch (error) {
+                showResults({ error: error.message }, true);
+            } finally {
+                setLoading(false, 'tvSubmit');
+            }
+        });
+    </script>
+</body>
+</html>

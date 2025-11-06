@@ -1,0 +1,121 @@
+﻿.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.dashboard__hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.dashboard__hero > div:first-child {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 100%);
+  color: #f8fafc;
+  padding: 2.5rem;
+  border-radius: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 25px 60px -40px rgba(14, 165, 233, 0.6);
+}
+
+.dashboard__hero h2 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.dashboard__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.dashboard__pill {
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dashboard__pill:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dashboard__pill--secondary {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dashboard__pill--ghost {
+  background: transparent;
+}
+
+.dashboard__highlights {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.dashboard__highlights article {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-shadow: 0 18px 40px -32px rgba(15, 23, 42, 0.35);
+}
+
+.dashboard__panel {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 1.5rem;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 18px 40px -32px rgba(15, 23, 42, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.dashboard__panel header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard__panel header h3 {
+  margin: 0;
+}
+
+.dashboard__panel header a {
+  font-size: 0.9rem;
+  color: #2563eb;
+}
+
+.dashboard__panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard__panel th,
+.dashboard__panel td {
+  text-align: left;
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.dashboard__panel tbody tr:hover {
+  background: rgba(37, 99, 235, 0.07);
+}
+
+@media (max-width: 768px) {
+  .dashboard__panel header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .dashboard__panel table {
+    font-size: 0.9rem;
+  }
+}

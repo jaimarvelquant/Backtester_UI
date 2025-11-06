@@ -1,0 +1,23 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { useAuth } from '@context/AuthContext';
+import { AppLayout } from '@components/layout/AppLayout';
+import { AlertBanner } from '@components/feedback/AlertBanner';
+import { LoadingOverlay } from '@components/feedback/LoadingOverlay';
+import LoginPage from '@pages/Login/LoginPage';
+import DashboardPage from '@pages/Dashboard/DashboardPage';
+import PortfolioListPage from '@pages/Portfolio/PortfolioListPage';
+import PortfolioDetailPage from '@pages/Portfolio/PortfolioDetailPage';
+import TradingViewListPage from '@pages/TradingView/TradingViewListPage';
+import TradingViewDetailPage from '@pages/TradingView/TradingViewDetailPage';
+import BacktestingListPage from '@pages/Backtesting/BacktestingListPage';
+import BacktestingResultPage from '@pages/Backtesting/BacktestingResultPage';
+import BacktestConfigurationPage from '@pages/Backtesting/BacktestConfigurationPage';
+import MasterDataPage from '@pages/MasterData/MasterDataPage';
+import UserManagementPage from '@pages/Users/UserManagementPage';
+import NotFoundPage from '@pages/NotFound/NotFoundPage';
+const App = () => {
+    const { isAuthenticated } = useAuth();
+    return (_jsxs(_Fragment, { children: [_jsx(AlertBanner, {}), _jsx(LoadingOverlay, {}), _jsxs(Routes, { children: [_jsx(Route, { path: "/login", element: isAuthenticated ? _jsx(Navigate, { to: "/dashboard", replace: true }) : _jsx(LoginPage, {}) }), _jsxs(Route, { path: "/", element: isAuthenticated ? _jsx(AppLayout, {}) : _jsx(Navigate, { to: "/login", replace: true }), children: [_jsx(Route, { index: true, element: _jsx(Navigate, { to: "/dashboard", replace: true }) }), _jsx(Route, { path: "dashboard", element: _jsx(DashboardPage, {}) }), _jsxs(Route, { path: "portfolio", children: [_jsx(Route, { index: true, element: _jsx(Navigate, { to: "/portfolio/list", replace: true }) }), _jsx(Route, { path: "list", element: _jsx(PortfolioListPage, {}) }), _jsx(Route, { path: ":id", element: _jsx(PortfolioDetailPage, {}) })] }), _jsxs(Route, { path: "backtesting", children: [_jsx(Route, { index: true, element: _jsx(Navigate, { to: "/backtesting/list", replace: true }) }), _jsx(Route, { path: "list", element: _jsx(BacktestingListPage, {}) }), _jsx(Route, { path: "configure", element: _jsx(BacktestConfigurationPage, {}) }), _jsx(Route, { path: "result/:id", element: _jsx(BacktestingResultPage, {}) })] }), _jsxs(Route, { path: "trading-view", children: [_jsx(Route, { index: true, element: _jsx(Navigate, { to: "/trading-view/list", replace: true }) }), _jsx(Route, { path: "list", element: _jsx(TradingViewListPage, {}) }), _jsx(Route, { path: ":id", element: _jsx(TradingViewDetailPage, {}) })] }), _jsxs(Route, { path: "backtesting-tradingview", children: [_jsx(Route, { index: true, element: _jsx(Navigate, { to: "/backtesting-tradingview/list", replace: true }) }), _jsx(Route, { path: "list", element: _jsx(BacktestingListPage, {}) }), _jsx(Route, { path: "result/:id", element: _jsx(BacktestingResultPage, {}) })] }), _jsx(Route, { path: "master-data", element: _jsx(MasterDataPage, {}) }), _jsx(Route, { path: "user", element: _jsx(UserManagementPage, {}) }), _jsx(Route, { path: "*", element: _jsx(NotFoundPage, {}) })] }), _jsx(Route, { path: "*", element: _jsx(Navigate, { to: isAuthenticated ? '/dashboard' : '/login', replace: true }) })] })] }));
+};
+export default App;

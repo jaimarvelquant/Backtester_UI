@@ -1,0 +1,395 @@
+[2m10:38:46 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:38:46 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:38:48 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:38:48 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:38:48 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:19 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:19 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:58:19 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:58:19 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:43 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:43 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:58:43 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:58:43 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:47 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:47 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:58:47 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:58:48 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:53 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:53 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:58:53 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:58:54 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:59:11 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:59:11 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:59:11 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:59:11 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:59:45 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:59:45 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:59:46 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:59:46 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m11:00:16 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m11:00:16 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m11:00:17 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:00:17 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m11:22:05 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m11:22:05 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m11:22:05 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:22:05 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+^C^Cain.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:58:23 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:43 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:43 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:58:43 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:58:44 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:47 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:47 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:58:47 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:47 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:58:48 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:53 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:58:53 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:58:53 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:58:55 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:59:11 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:59:11 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:59:11 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:59:13 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:59:45 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m10:59:45 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m10:59:45 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m10:59:48 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m11:00:17 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m11:00:17 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m11:00:17 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:00:20 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m11:22:05 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m11:22:05 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m11:22:05 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/main.tsx[39m:10:7
+[33m  8  |  import { AlertProvider } from '@context/AlertContext';
+  9  |  import { LoadingProvider } from '@context/LoadingContext';
+  10 |  import '@styles/global.css';
+     |          ^
+  11 |  const queryClient = new QueryClient();
+  12 |  ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/ _jsxDEV(React.StrictMode, {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:22:08 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@styles/global.css" from "src/main.tsx". Does the file exist?
+[2m11:22:38 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m11:22:39 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/pages/Users/UserManagementPage.tsx[39m:8:7
+[33m  25 |  import { useAlert } from '@context/AlertContext';
+  26 |  import { useLoading } from '@context/LoadingContext';
+  27 |  import './UserManagementPage.css';
+     |          ^
+  28 |  const DEFAULT_ACCESS = [
+  29 |      {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:22:46 am[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?
+[2m11:22:46 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./UserManagementPage.css" from "src/pages/Users/UserManagementPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/strategy/webapp/src/pages/Users/UserManagementPage.tsx[39m:8:7
+[33m  25 |  import { useAlert } from '@context/AlertContext';
+  26 |  import { useLoading } from '@context/LoadingContext';
+  27 |  import './UserManagementPage.css';
+     |          ^
+  28 |  const DEFAULT_ACCESS = [
+  29 |      {[39m
+      at TransformPluginContext._formatError (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at async file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/strategy/webapp/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)

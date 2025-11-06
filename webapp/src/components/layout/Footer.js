@@ -1,0 +1,2 @@
+import { jsxs as _jsxs, jsx as _jsx } from "react/jsx-runtime";
+export const AppFooter = () => (_jsxs("footer", { className: "app-footer", children: [_jsxs("span", { children: ["\u00A9 ", new Date().getFullYear(), " Strategic Analysis Platform"] }), _jsx("span", { className: "app-footer__links", children: _jsx("a", { href: "https://coreui.io/angular/", target: "_blank", rel: "noreferrer", children: "Inspired by CoreUI Angular" }) })] }));

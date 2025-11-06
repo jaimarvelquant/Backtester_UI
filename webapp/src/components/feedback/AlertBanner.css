@@ -1,0 +1,38 @@
+﻿.alert-banner {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  min-width: 320px;
+  max-width: 480px;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  box-shadow: 0 18px 35px -15px rgba(15, 23, 42, 0.6);
+  z-index: 9998;
+  letter-spacing: 0.01em;
+}
+
+.alert-banner span {
+  flex: 1;
+}
+
+.alert-close {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.alert-primary { background: #e0f2ff; color: #0f172a; }
+.alert-secondary { background: #e2e8f0; color: #1e293b; }
+.alert-success { background: #def7ec; color: #065f46; }
+.alert-danger { background: #fee2e2; color: #b91c1c; }
+.alert-warning { background: #fef3c7; color: #92400e; }
+.alert-info { background: #e0f2fe; color: #0c4a6e; }
+.alert-light { background: #f8fafc; color: #334155; }
+.alert-dark { background: #1f2937; color: #f9fafb; }

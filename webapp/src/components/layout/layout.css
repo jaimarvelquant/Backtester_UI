@@ -1,0 +1,159 @@
+﻿.app-shell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.app-shell__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-shell__content {
+  flex: 1;
+  padding: 1.5rem 2.5rem;
+  overflow-y: auto;
+}
+
+.app-sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  gap: 2rem;
+}
+
+.app-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.app-sidebar__logo {
+  font-size: 1.5rem;
+}
+
+.app-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.app-sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.75rem;
+  color: inherit;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.app-sidebar__link:hover {
+  background: rgba(148, 163, 184, 0.22);
+  transform: translateX(4px);
+}
+
+.app-sidebar__link.is-active {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.app-sidebar__icon {
+  font-size: 1.2rem;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem 0.5rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+}
+
+.app-header__subtitle {
+  margin: 0.25rem 0 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.app-header__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-header__user-meta {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.app-header__user-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.app-header__user-role {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.app-header__logout {
+  border: none;
+  background: #ef4444;
+  color: #f8fafc;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-header__logout:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px -15px rgba(239, 68, 68, 0.75);
+}
+
+.app-footer {
+  padding: 1rem 2.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.app-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .app-sidebar {
+    display: none;
+  }
+
+  .app-shell__content {
+    padding: 1rem 1.5rem 2.5rem;
+  }
+
+  .app-header {
+    padding: 1rem 1.5rem 0.25rem;
+  }
+}
