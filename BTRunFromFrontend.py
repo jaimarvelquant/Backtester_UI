@@ -146,6 +146,110 @@ def getBtOutputJson(btParaToTest: dict) -> dict:
 def mainPage():
     return 'Hello!'
 
+# File paths for Standard Backtest
+SAMPLE_BACKTEST_PATH = r"C:\Users\Calin Jasper\Downloads\input json\sample backtest.json"
+INPUT_PORTFOLIO_PATH = r"C:\Users\Calin Jasper\Downloads\input json\input portfolio.json"
+
+@app.route('/standard-backtest/run', methods=['POST'])
+def run_standard_backtest():
+    """Run standard backtest using JSON files"""
+    try:
+        # Load backtest parameters from files
+        sample_backtest = {}
+        input_portfolio = {}
+
+        # Load sample backtest file
+        if os.path.exists(SAMPLE_BACKTEST_PATH):
+            with open(SAMPLE_BACKTEST_PATH, 'r') as f:
+                sample_backtest = json.load(f)
+        else:
+            return {"status": "error", "message": f"Sample backtest file not found: {SAMPLE_BACKTEST_PATH}"}
+
+        # Load input portfolio file
+        if os.path.exists(INPUT_PORTFOLIO_PATH):
+            with open(INPUT_PORTFOLIO_PATH, 'r') as f:
+                input_portfolio = json.load(f)
+        else:
+            return {"status": "error", "message": f"Input portfolio file not found: {INPUT_PORTFOLIO_PATH}"}
+
+        # Combine parameters
+        combined_params = {
+            "sample_backtest": sample_backtest,
+            "input_portfolio": input_portfolio
+        }
+
+        # Run backtest with combined parameters
+        return getBtOutputJson(btParaToTest=combined_params)
+
+    except Exception as e:
+        logging.error(f"Error in run_standard_backtest: {str(e)}")
+        return {"status": "error", "message": f"Error running backtest: {str(e)}"}
+
+@app.route('/standard-backtest/input', methods=['GET'])
+def get_standard_input():
+    """Get current input parameters for standard backtest"""
+    try:
+        result = {}
+
+        # Load sample backtest file
+        if os.path.exists(SAMPLE_BACKTEST_PATH):
+            with open(SAMPLE_BACKTEST_PATH, 'r') as f:
+                result["sample_backtest"] = json.load(f)
+        else:
+            result["sample_backtest"] = {"error": f"File not found: {SAMPLE_BACKTEST_PATH}"}
+
+        # Load input portfolio file
+        if os.path.exists(INPUT_PORTFOLIO_PATH):
+            with open(INPUT_PORTFOLIO_PATH, 'r') as f:
+                result["input_portfolio"] = json.load(f)
+        else:
+            result["input_portfolio"] = {"error": f"File not found: {INPUT_PORTFOLIO_PATH}"}
+
+        return {"status": "success", "data": result}
+
+    except Exception as e:
+        return {"status": "error", "message": f"Error reading input files: {str(e)}"}
+
+@app.route('/standard-backtest/update-sample', methods=['POST'])
+def update_sample_backtest():
+    """Update sample backtest parameters"""
+    try:
+        new_params = request.json
+
+        if not new_params:
+            return {"status": "error", "message": "No parameters provided"}
+
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(SAMPLE_BACKTEST_PATH), exist_ok=True)
+
+        with open(SAMPLE_BACKTEST_PATH, 'w') as f:
+            json.dump(new_params, f, indent=4)
+
+        return {"status": "success", "message": "Sample backtest updated successfully"}
+
+    except Exception as e:
+        return {"status": "error", "message": f"Error updating sample backtest: {str(e)}"}
+
+@app.route('/standard-backtest/update-portfolio', methods=['POST'])
+def update_input_portfolio():
+    """Update input portfolio parameters"""
+    try:
+        new_params = request.json
+
+        if not new_params:
+            return {"status": "error", "message": "No parameters provided"}
+
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(INPUT_PORTFOLIO_PATH), exist_ok=True)
+
+        with open(INPUT_PORTFOLIO_PATH, 'w') as f:
+            json.dump(new_params, f, indent=4)
+
+        return {"status": "success", "message": "Input portfolio updated successfully"}
+
+    except Exception as e:
+        return {"status": "error", "message": f"Error updating input portfolio: {str(e)}"}
+
 @app.route("/backtest", methods=['POST'])
 def backtest():
 

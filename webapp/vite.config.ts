@@ -12,8 +12,9 @@ export default defineConfig({
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@services': path.resolve(__dirname, 'src/services'),
       '@utils': path.resolve(__dirname, 'src/utils'),
-      '@types': path.resolve(__dirname, 'src/types'),
-      '@styles': path.resolve(__dirname, 'src/styles')
+      '@app-types': path.resolve(__dirname, 'src/types'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
+      '@data': path.resolve(__dirname, 'src/data')
     }
   },
   server: {
@@ -30,6 +31,14 @@ export default defineConfig({
       },
       '/strategy/backtest': {
         target: 'http://localhost:8080',
+        changeOrigin: true
+      },
+      '/simple-backtest': {
+        target: 'http://localhost:5000',
+        changeOrigin: true
+      },
+      '/tradingview-backtest': {
+        target: 'http://localhost:5000',
         changeOrigin: true
       }
     }

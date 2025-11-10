@@ -3,7 +3,7 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "moduleResolution": "Node",
     "strict": true,
     "resolveJsonModule": true,
@@ -21,7 +21,9 @@
       "@pages/*": ["pages/*"],
       "@services/*": ["services/*"],
       "@utils/*": ["utils/*"],
-      "@types/*": ["types/*"]
+      "@data/*": ["data/*"],
+      "@app-types/*": ["types/*"],
+      "@styles/*": ["styles/*"]
     }
   },
   "include": ["src"],

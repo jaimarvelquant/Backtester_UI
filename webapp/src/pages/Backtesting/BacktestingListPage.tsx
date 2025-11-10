@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useApiClient } from '@hooks/useApiClient';
 import { useAlert } from '@context/AlertContext';
 import { useLoading } from '@context/LoadingContext';
-import type { Portfolio, ApiResponse, PaginatedResponse } from '@types/api';
+import type { Portfolio, ApiResponse, PaginatedResponse } from '@app-types/api';
 import { dateStringToLong, dateLongToDisplay } from '@utils/date';
 import { roundTo } from '@utils/number';
 import { downloadBlob } from '@utils/download';

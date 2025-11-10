@@ -4,7 +4,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useApiClient } from "@hooks/useApiClient";
 import { useAlert } from "@context/AlertContext";
 import { useLoading } from "@context/LoadingContext";
-import type { Portfolio, ApiResponse, PaginatedResponse } from "@types/api";
+import type { Portfolio, ApiResponse, PaginatedResponse } from "@app-types/api";
 import { dateStringToLong, dateLongToDisplay } from "@utils/date";
 import { roundTo } from "@utils/number";
 import { downloadBlob } from "@utils/download";
@@ -31,6 +31,10 @@ const PortfolioListPage: React.FC = () => {
   const [appliedFilters, setAppliedFilters] = useState<PortfolioFilters>({});
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(10);
+  const [showUploadModal, setShowUploadModal] = useState(false);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [isUploading, setIsUploading] = useState(false);
 
   const queryKey = useMemo(
     () => ["portfolios", appliedFilters, page, size],
@@ -128,6 +132,93 @@ const PortfolioListPage: React.FC = () => {
     }
   };
 
+  // JSON Upload handlers
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      if (file.type !== "application/json" && !file.name.endsWith(".json")) {
+        show("danger", "Please select a valid JSON file");
+        return;
+      }
+      setSelectedFile(file);
+      setUploadProgress(0);
+    }
+  };
+
+  const handleUpload = async () => {
+    if (!selectedFile) {
+      show("danger", "Please select a JSON file to upload");
+      return;
+    }
+
+    setIsUploading(true);
+    setUploadProgress(0);
+
+    try {
+      const formData = new FormData();
+      formData.append("file", selectedFile);
+
+      // Simulate upload progress
+      const progressInterval = setInterval(() => {
+        setUploadProgress((prev) => {
+          if (prev >= 90) {
+            clearInterval(progressInterval);
+            return 90;
+          }
+          return prev + 10;
+        });
+      }, 100);
+
+      // Get user ID - you might need to get this from authentication context
+      // For now, using a default user ID
+      const userId = 1;
+      const strategyType = "JSON_UPLOAD";
+
+      const response = await withLoader(() =>
+        apiClient.uploadPortfolio(formData, userId, strategyType)
+      );
+
+      clearInterval(progressInterval);
+      setUploadProgress(100);
+
+      if (response.status === "success") {
+        show("success", `Portfolio "${selectedFile.name}" uploaded successfully!`);
+        setSelectedFile(null);
+        setShowUploadModal(false);
+        setUploadProgress(0);
+
+        // Refresh the portfolio list
+        queryClient.invalidateQueries({ queryKey });
+
+        // Reset file input
+        const fileInput = document.getElementById("json-file-input") as HTMLInputElement;
+        if (fileInput) fileInput.value = "";
+      } else {
+        show("danger", response.message || "Failed to upload portfolio");
+      }
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Failed to upload portfolio";
+      show("danger", message);
+    } finally {
+      setIsUploading(false);
+    }
+  };
+
+  const handleCancelUpload = () => {
+    setShowUploadModal(false);
+    setSelectedFile(null);
+    setUploadProgress(0);
+    setIsUploading(false);
+
+    // Reset file input
+    const fileInput = document.getElementById("json-file-input") as HTMLInputElement;
+    if (fileInput) fileInput.value = "";
+  };
+
+  const validateJsonFile = (file: File): boolean => {
+    return file.type === "application/json" || file.name.endsWith(".json");
+  };
+
   return (
     <div className="portfolio-page">
       <header className="portfolio-page__header">
@@ -135,7 +226,7 @@ const PortfolioListPage: React.FC = () => {
           <h2>Portfolio Management</h2>
           <p>Search, execute, and export multi-leg strategy portfolios.</p>
         </div>
-        <button className="btn btn-primary" type="button" onClick={() => show("info","Upload JSON support is coming soon. Use the API endpoints meanwhile.")}>
+        <button className="btn btn-primary" type="button" onClick={() => setShowUploadModal(true)}>
           + New Portfolio (JSON Upload)
         </button>
       </header>
@@ -304,6 +395,134 @@ const PortfolioListPage: React.FC = () => {
           </button>
         </footer>
       </section>
+
+      {/* JSON Upload Modal */}
+      {showUploadModal && (
+        <div className="modal-overlay" onClick={handleCancelUpload}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>📁 Upload Portfolio JSON</h3>
+              <button
+                type="button"
+                className="modal-close"
+                onClick={handleCancelUpload}
+                disabled={isUploading}
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="modal-body">
+              <div className="upload-area">
+                <input
+                  id="json-file-input"
+                  type="file"
+                  accept=".json,application/json"
+                  onChange={handleFileSelect}
+                  disabled={isUploading}
+                  style={{ display: 'none' }}
+                />
+
+                <label
+                  htmlFor="json-file-input"
+                  className={`file-drop-zone ${selectedFile ? 'has-file' : ''} ${isUploading ? 'disabled' : ''}`}
+                >
+                  <div className="file-drop-icon">
+                    {selectedFile ? '📄' : '📁'}
+                  </div>
+                  <div className="file-drop-text">
+                    {selectedFile ? (
+                      <>
+                        <strong>{selectedFile.name}</strong>
+                        <br />
+                        <span className="file-size">
+                          {(selectedFile.size / 1024).toFixed(2)} KB
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <strong>Click to browse or drag and drop</strong>
+                        <br />
+                        <span>Select a JSON portfolio file to upload</span>
+                      </>
+                    )}
+                  </div>
+                </label>
+              </div>
+
+              {selectedFile && (
+                <div className="file-info">
+                  <h4>📋 File Details</h4>
+                  <div className="file-details">
+                    <div className="detail-item">
+                      <span className="label">Name:</span>
+                      <span className="value">{selectedFile.name}</span>
+                    </div>
+                    <div className="detail-item">
+                      <span className="label">Size:</span>
+                      <span className="value">{(selectedFile.size / 1024).toFixed(2)} KB</span>
+                    </div>
+                    <div className="detail-item">
+                      <span className="label">Type:</span>
+                      <span className="value">{selectedFile.type || 'application/json'}</span>
+                    </div>
+                    <div className="detail-item">
+                      <span className="label">Last Modified:</span>
+                      <span className="value">
+                        {new Date(selectedFile.lastModified).toLocaleString()}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {isUploading && (
+                <div className="upload-progress">
+                  <div className="progress-header">
+                    <span>Uploading portfolio...</span>
+                    <span>{uploadProgress}%</span>
+                  </div>
+                  <div className="progress-bar">
+                    <div
+                      className="progress-fill"
+                      style={{ width: `${uploadProgress}%` }}
+                    ></div>
+                  </div>
+                </div>
+              )}
+
+              <div className="upload-instructions">
+                <h4>📝 Instructions</h4>
+                <ul>
+                  <li>Select a valid JSON portfolio file</li>
+                  <li>The file should contain portfolio configuration data</li>
+                  <li>Supported format: .json files only</li>
+                  <li>Maximum file size: 10MB</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={handleCancelUpload}
+                disabled={isUploading}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={handleUpload}
+                disabled={!selectedFile || isUploading}
+              >
+                {isUploading ? 'Uploading...' : 'Upload Portfolio'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

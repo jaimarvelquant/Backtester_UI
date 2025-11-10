@@ -1,5 +1,5 @@
 ﻿import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import type { LoginResponseData, User } from '@types/api';
+import type { LoginResponseData, User } from '@app-types/api';
 
 type AuthContextValue = {
   user: LoginResponseData | null;

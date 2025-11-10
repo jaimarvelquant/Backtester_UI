@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Integration Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .status {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #dee2e6;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Frontend Integration Test</h1>
+        <p>Test the React frontend backend integration for Simple and TradingView backtest services.</p>
+
+        <div class="test-section">
+            <h3>📊 Simple Backtest Test</h3>
+            <p>Test the Simple Backtest service integration with the React frontend.</p>
+            <button onclick="testSimpleBacktest()">▶️ Test Simple Backtest API</button>
+            <button onclick="testSimpleBacktestInput()">📋 Get Simple Backtest Input</button>
+            <div id="simpleStatus"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>📈 TradingView Backtest Test</h3>
+            <p>Test the TradingView Backtest service integration with the React frontend.</p>
+            <button onclick="testTradingViewBacktest()">▶️ Test TradingView Backtest API</button>
+            <button onclick="testTradingViewInput()">📋 Get TradingView Input</button>
+            <div id="tvStatus"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>🔗 Frontend URL</h3>
+            <p><strong>React Frontend:</strong> <a href="http://localhost:5173/backtesting/configure" target="_blank">http://localhost:5173/backtesting/configure</a></p>
+            <p>Open the link above to test the actual React frontend with the new Simple and TradingView backtest input fields.</p>
+        </div>
+
+        <div class="test-section">
+            <h3>📋 API Gateway Endpoints</h3>
+            <ul>
+                <li><strong>Simple Backtest:</strong> http://localhost:5000/simple-backtest/*</li>
+                <li><strong>TradingView Backtest:</strong> http://localhost:5000/tradingview-backtest/*</li>
+                <li><strong>Standard Backtest:</strong> http://localhost:5000/standard-backtest/*</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:5000';
+
+        function showStatus(elementId, message, type = 'info') {
+            const statusDiv = document.getElementById(elementId);
+            statusDiv.className = `status ${type}`;
+            statusDiv.innerHTML = message;
+        }
+
+        async function testSimpleBacktest() {
+            showStatus('simpleStatus', 'Testing Simple Backtest API...', 'info');
+
+            try {
+                const response = await fetch(`${API_BASE}/simple-backtest/run`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({})
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    const stats = data.statistics;
+                    showStatus('simpleStatus', `
+                        ✅ <strong>Simple Backtest Test Successful!</strong><br>
+                        📁 Input: ${data.input_file}<br>
+                        📁 Output: ${data.output_file}<br>
+                        📊 Total Trades: ${stats.total_trades}<br>
+                        💰 Net P&L: ₹${stats.net_pnl.toLocaleString('en-IN')}<br>
+                        📈 Win Rate: ${(stats.win_rate * 100).toFixed(1)}%<br>
+                        ⏰ Generated: ${stats.generated_at}
+                    `, 'success');
+                } else {
+                    showStatus('simpleStatus', `❌ Simple Backtest test failed: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                showStatus('simpleStatus', `❌ Simple Backtest test failed: ${error.message}`, 'error');
+            }
+        }
+
+        async function testSimpleBacktestInput() {
+            showStatus('simpleStatus', 'Loading Simple Backtest input parameters...', 'info');
+
+            try {
+                const response = await fetch(`${API_BASE}/simple-backtest/input`);
+                const data = await response.json();
+
+                if (data.success) {
+                    showStatus('simpleStatus', `
+                        ✅ <strong>Simple Backtest Input Loaded!</strong><br>
+                        📁 Input file: ${data.input_file}<br>
+                        📋 Parameters loaded successfully
+                    `, 'success');
+                } else {
+                    showStatus('simpleStatus', `❌ Failed to load Simple Backtest input: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                showStatus('simpleStatus', `❌ Failed to load Simple Backtest input: ${error.message}`, 'error');
+            }
+        }
+
+        async function testTradingViewBacktest() {
+            showStatus('tvStatus', 'Testing TradingView Backtest API...', 'info');
+
+            try {
+                const response = await fetch(`${API_BASE}/tradingview-backtest/run`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({})
+                });
+
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    showStatus('tvStatus', `
+                        ✅ <strong>TradingView Backtest Test Successful!</strong><br>
+                        📊 Backtest completed successfully<br>
+                        📁 Results generated
+                    `, 'success');
+                } else {
+                    showStatus('tvStatus', `❌ TradingView Backtest test failed: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                showStatus('tvStatus', `❌ TradingView Backtest test failed: ${error.message}`, 'error');
+            }
+        }
+
+        async function testTradingViewInput() {
+            showStatus('tvStatus', 'Loading TradingView Backtest input parameters...', 'info');
+
+            try {
+                const response = await fetch(`${API_BASE}/tradingview-backtest/input`);
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    const fileCount = Object.keys(data.data).length;
+                    showStatus('tvStatus', `
+                        ✅ <strong>TradingView Input Loaded!</strong><br>
+                        📁 Successfully loaded ${fileCount} JSON files:<br>
+                        • input_tv<br>
+                        • tbs_long<br>
+                        • tbs_short<br>
+                        • portfolio_long<br>
+                        • portfolio_short<br>
+                        • tradingview_backtest
+                    `, 'success');
+                } else {
+                    showStatus('tvStatus', `❌ Failed to load TradingView input: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                showStatus('tvStatus', `❌ Failed to load TradingView input: ${error.message}`, 'error');
+            }
+        }
+
+        // Auto-test on page load
+        window.addEventListener('load', () => {
+            showStatus('simpleStatus', '🔄 Ready to test Simple Backtest integration', 'info');
+            showStatus('tvStatus', '🔄 Ready to test TradingView Backtest integration', 'info');
+        });
+    </script>
+</body>
+</html>

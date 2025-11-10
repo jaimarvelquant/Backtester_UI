@@ -1,0 +1,311 @@
+{
+  "istickbt": false,
+  "slippage_percent": 0.005,
+  "start_date": 250101,
+  "end_date": 260929,
+  "broker_details": {
+    "broker": "BROKER.PAPER"
+  },
+  "exchange": "EXCHANGE.NSE",
+  "order_type": "ORDERTYPE.MARKET",
+  "product_type": "PRODUCTTYPE.NRML",
+  "fix_vix": 0,
+  "check_interval": 60,
+  "feed_source": "FEEDSOURCE.HISTORICAL",
+  "portfolio": {
+    "id": 0,
+    "name": "CRUDE_STRATEGY",
+    "initial_capital": 100000,
+    "stop_loss": {
+      "type": "NUMBERTYPE.PERCENTAGE",
+      "value": -1.0,
+      "params": {
+        "check_frequency": 60
+      }
+    },
+    "take_profit": {
+      "type": "NUMBERTYPE.PERCENTAGE",
+      "value": 2.0,
+      "params": {
+        "check_frequency": 60
+      }
+    },
+    "trailing_stop_loss": {
+      "profit_move": {
+        "type": "NUMBERTYPE.PERCENTAGE",
+        "value": 0.0
+      },
+      "stop_loss_move": {
+        "type": "NUMBERTYPE.PERCENTAGE",
+        "value": 0.0
+      }
+    },
+    "lock_and_trail": {
+      "Type": "LOCKTYPE.MAX_TILL_TIME",
+      "lock_time": 233000,
+      "lock": 0.0,
+      "trail": 0.0
+    },
+    "square_off": {
+      "sq_off_1_time": 233000,
+      "sq_off_1_percent": 0.0,
+      "sq_off_2_time": 233000,
+      "sq_off_2_percent": 0.0
+    },
+    "strategies": [
+      {
+        "index_base_price": 0,
+        "index_traded": "NIFTY",
+        "instrument_type": "OPTIDX",
+        "expiry_selection": {
+          "type": "EXPIRYTYPE.CURRENT",
+          "value": 0
+        },
+        "exit_day": {
+          "type": "EXITDAY.EXPIRY",
+          "value": 0
+        },
+        "lot_size": 1,
+        "quantity": 1,
+        "multiplier": 1.0,
+        "strategy_parameters": {
+          "StrategyName": "N1",
+          "MoveSlToCost": "no",
+          "Underlying": "SPOT",
+          "Index": "NIFTY",
+          "Weekdays": "1,2,3,4,5",
+          "DTE": 10,
+          "StrikeSelectionTime": 95500,
+          "StartTime": 95500,
+          "LastEntryTime": 140000,
+          "EndTime": 140000,
+          "StrategyProfit": 0,
+          "StrategyLoss": 0,
+          "StrategyProfitReExecuteNo": 0,
+          "StrategyLossReExecuteNo": 0,
+          "StrategyTrailingType": "Lock & Trail Profits",
+          "ProfitReaches": 0,
+          "LockMinProfitAt": 0,
+          "IncreaseInProfit": 0,
+          "TrailMinProfitBy": 0,
+          "TgtTrackingFrom": "high/low",
+          "TgtRegisterPriceFrom": "tracking",
+          "SlTrackingFrom": "high/low",
+          "SlRegisterPriceFrom": "tracking",
+          "PnLCalculationFrom": "close",
+          "ConsiderHedgePnLForStgyPnL": "no",
+          "CheckPremiumDiffCondition": "no",
+          "PremiumDiffType": "point",
+          "PremiumDiffValue": 10,
+          "PremiumDiffChangeStrike": "yes",
+          "PremiumDiffDoForceEntry": "yes",
+          "PremiumDiffDoForceAfter": 10,
+          "PremiumDiffForceEntryConsiderPremium": "higher",
+          "StoplossCheckingInterval": 1,
+          "TargetCheckingInterval": 1,
+          "ReEntryCheckingInterval": 1,
+          "OnExpiryDayTradeNextExpiry": "no"
+        },
+        "entry": {
+          "type": "ENTRYTYPE.TIMESTRATEGY",
+          "time": "09:55",
+          "day": {
+            "type": "DAYOFWEEK.EVERYDAY"
+          }
+        },
+        "exit": {
+          "type": "EXITTYPE.TIMESTRATEGY",
+          "time": "14:00",
+          "day": {
+            "type": "DAYOFWEEK.EVERYDAY"
+          }
+        },
+        "strategy": "IRON_BUTTERFLY",
+        "legs": [
+          {
+            "leg_id": 1,
+            "strike_selection": {
+              "type": "STRIKETYPE.DELTA",
+              "value": 0.5
+            },
+            "strike": 0,
+            "call_put": "CALLPUT.CALL",
+            "action": "ACTION.SELL",
+            "ratio": 1,
+            "leg_parameters": {
+              "IsIdle": "no",
+              "LegID": 1,
+              "Instrument": "call",
+              "Transaction": "sell",
+              "Expiry": "current",
+              "MatchPremium": "high",
+              "W&Type": "percentage",
+              "W&TValue": 0,
+              "StrikeMethod": "delta",
+              "StrikeValue": 0.5,
+              "StrikePremiumCondition": ">",
+              "SLType": "percentage",
+              "SLValue": 100,
+              "TGTType": "percentage",
+              "TGTValue": 0,
+              "TrailSLType": "percentage",
+              "SL_TrailAt": 0,
+              "SL_TrailBy": 0,
+              "Lots": 100,
+              "ReEntryType": "instant new strike",
+              "ReEnteriesCount": 0,
+              "OnEntry_SqOffAllLegs": "no",
+              "OnEntry_OpenTradeDelay": 0,
+              "OnEntry_SqOffDelay": 0,
+              "OnExit_SqOffTradeOff": 3,
+              "OnExit_SqOffAllLegs": "no",
+              "OnExit_OpenAllLegs": "no",
+              "OnExit_OpenTradeDelay": 0,
+              "OnExit_SqOffDelay": 0,
+              "OpenHedge": "No",
+              "HedgeStrikeMethod": "atm",
+              "HedgeStrikeValue": 0,
+              "HedgeStrikePremiumCondition": "="
+            }
+          },
+          {
+            "leg_id": 2,
+            "strike_selection": {
+              "type": "STRIKETYPE.DELTA",
+              "value": -0.5
+            },
+            "strike": 0,
+            "call_put": "CALLPUT.PUT",
+            "action": "ACTION.SELL",
+            "ratio": 1,
+            "leg_parameters": {
+              "IsIdle": "no",
+              "LegID": 2,
+              "Instrument": "put",
+              "Transaction": "sell",
+              "Expiry": "current",
+              "MatchPremium": "high",
+              "W&Type": "percentage",
+              "W&TValue": 0,
+              "StrikeMethod": "delta",
+              "StrikeValue": -0.5,
+              "StrikePremiumCondition": "<",
+              "SLType": "percentage",
+              "SLValue": 100,
+              "TGTType": "percentage",
+              "TGTValue": 0,
+              "TrailSLType": "percentage",
+              "SL_TrailAt": 0,
+              "SL_TrailBy": 0,
+              "Lots": 100,
+              "ReEntryType": "instant new strike",
+              "ReEnteriesCount": 0,
+              "OnEntry_SqOffAllLegs": "no",
+              "OnEntry_OpenTradeDelay": 0,
+              "OnEntry_SqOffDelay": 0,
+              "OnExit_SqOffTradeOff": 4,
+              "OnExit_SqOffAllLegs": "no",
+              "OnExit_OpenAllLegs": "no",
+              "OnExit_OpenTradeDelay": 0,
+              "OnExit_SqOffDelay": 0,
+              "OpenHedge": "No",
+              "HedgeStrikeMethod": "atm",
+              "HedgeStrikeValue": 0,
+              "HedgeStrikePremiumCondition": "="
+            }
+          },
+          {
+            "leg_id": 3,
+            "strike_selection": {
+              "type": "STRIKETYPE.ATM",
+              "value": 5
+            },
+            "strike": 0,
+            "call_put": "CALLPUT.CALL",
+            "action": "ACTION.BUY",
+            "ratio": 1,
+            "leg_parameters": {
+              "IsIdle": "no",
+              "LegID": 3,
+              "Instrument": "call",
+              "Transaction": "buy",
+              "Expiry": "current",
+              "MatchPremium": "high",
+              "W&Type": "percentage",
+              "W&TValue": 0,
+              "StrikeMethod": "atm",
+              "StrikeValue": 5,
+              "StrikePremiumCondition": "=",
+              "SLType": "percentage",
+              "SLValue": 0,
+              "TGTType": "percentage",
+              "TGTValue": 100,
+              "TrailSLType": "percentage",
+              "SL_TrailAt": 0,
+              "SL_TrailBy": 0,
+              "Lots": 100,
+              "ReEntryType": "instant new strike",
+              "ReEnteriesCount": 0,
+              "OnEntry_SqOffAllLegs": "no",
+              "OnEntry_OpenTradeDelay": 0,
+              "OnEntry_SqOffDelay": 0,
+              "OnExit_SqOffAllLegs": "no",
+              "OnExit_OpenAllLegs": "no",
+              "OnExit_OpenTradeDelay": 0,
+              "OnExit_SqOffDelay": 0,
+              "OpenHedge": "No",
+              "HedgeStrikeMethod": "atm",
+              "HedgeStrikeValue": 0,
+              "HedgeStrikePremiumCondition": "="
+            }
+          },
+          {
+            "leg_id": 4,
+            "strike_selection": {
+              "type": "STRIKETYPE.ATM",
+              "value": 5
+            },
+            "strike": 0,
+            "call_put": "CALLPUT.PUT",
+            "action": "ACTION.BUY",
+            "ratio": 1,
+            "leg_parameters": {
+              "IsIdle": "no",
+              "LegID": 4,
+              "Instrument": "put",
+              "Transaction": "buy",
+              "Expiry": "current",
+              "MatchPremium": "high",
+              "W&Type": "percentage",
+              "W&TValue": 0,
+              "StrikeMethod": "atm",
+              "StrikeValue": 5,
+              "StrikePremiumCondition": "=",
+              "SLType": "percentage",
+              "SLValue": 0,
+              "TGTType": "percentage",
+              "TGTValue": 100,
+              "TrailSLType": "percentage",
+              "SL_TrailAt": 0,
+              "SL_TrailBy": 0,
+              "Lots": 100,
+              "ReEntryType": "instant new strike",
+              "ReEnteriesCount": 0,
+              "OnEntry_SqOffAllLegs": "no",
+              "OnEntry_OpenTradeDelay": 0,
+              "OnEntry_SqOffDelay": 0,
+              "OnExit_SqOffAllLegs": "no",
+              "OnExit_OpenAllLegs": "no",
+              "OnExit_OpenTradeDelay": 0,
+              "OnExit_SqOffDelay": 0,
+              "OpenHedge": "No",
+              "HedgeStrikeMethod": "atm",
+              "HedgeStrikeValue": 0,
+              "HedgeStrikePremiumCondition": "="
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

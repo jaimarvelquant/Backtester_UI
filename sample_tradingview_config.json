@@ -1,0 +1,21 @@
+{
+  "Name": "Sample TradingView Strategy",
+  "StartDate": "01_01_2024",
+  "EndDate": "01_01_2025",
+  "Enabled": "yes",
+  "TvExitApplicable": "yes",
+  "DoRollover": "no",
+  "SignalDateFormat": "%d-%m-%Y %H:%M",
+  "SignalFilePath": "D:\\Ajay\\BT Portfolio\\INPUT SHEETS\\sample_signals.xlsx",
+  "ManualTradeLots": 1,
+  "ManualTradeEntryTime": 0,
+  "IntradayExitTime": 151500,
+  "ExpiryDayExitTime": 151500,
+  "RolloverTime": 151500",
+  "IntradaySqOffApplicable": "no",
+  "LongPortfolioFilePath": "D:\\Ajay\\BT Portfolio\\INPUT SHEETS\\INPUT PORTFOLIO LONG.xlsx",
+  "ShortPortfolioFilePath": "D:\\Ajay\\BT Portfolio\\INPUT SHEETS\\INPUT PORTFOLIO SHORT.xlsx",
+  "FirstTradeEntryTime": 0,
+  "IncreaseEntrySignalTimeBy": 0,
+  "IncreaseExitSignalTimeBy": 0
+}

@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useApiClient } from '@hooks/useApiClient';
-import type { Portfolio, TradingView } from '@types/api';
+import type { Portfolio, TradingView } from '@app-types/api';
 import { roundTo } from '@utils/number';
 
 import './DashboardPage.css';

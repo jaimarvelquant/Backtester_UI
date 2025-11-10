@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Upload Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .status {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .file-info {
+            background: #e8f5e8;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .demo-link {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        .demo-link:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📁 JSON Upload Functionality Test</h1>
+        <p>Test the new JSON upload feature for portfolio management.</p>
+
+        <div class="test-section">
+            <h3>🎯 What Was Implemented</h3>
+            <ul>
+                <li>✅ <strong>JSON Upload Modal:</strong> Professional file upload dialog with drag-and-drop support</li>
+                <li>✅ <strong>File Validation:</strong> Validates JSON file type and size</li>
+                <li>✅ <strong>Progress Tracking:</strong> Visual upload progress with percentage indicator</li>
+                <li>✅ <strong>File Details:</strong> Shows file name, size, type, and modification date</li>
+                <li>✅ <strong>Error Handling:</strong> Comprehensive error handling and user feedback</li>
+                <li>✅ <strong>Backend Integration:</strong> Uses existing API client uploadPortfolio method</li>
+                <li>✅ <strong>Responsive Design:</strong> Works on desktop and mobile devices</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>🌐 Access Points</h3>
+            <p><strong>Main Application:</strong></p>
+            <a href="http://localhost:5173/portfolio/list" target="_blank" class="demo-link">
+                🚀 Open Portfolio List Page
+            </a>
+
+            <p><strong>Test Files:</strong></p>
+            <ul>
+                <li>📄 <code>D:\strategy\test_portfolio.json</code> - Sample portfolio JSON file</li>
+                <li>📄 You can create your own JSON files with portfolio configuration data</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>📋 How to Use</h3>
+            <ol>
+                <li>Navigate to <a href="http://localhost:5173/portfolio/list" target="_blank">Portfolio List Page</a></li>
+                <li>Click the <strong>"+ New Portfolio (JSON Upload)"</strong> button</li>
+                <li>Either:
+                    <ul>
+                        <li>Click the drop zone to browse files, or</li>
+                        <li>Drag and drop a JSON file onto the drop zone</li>
+                    </ul>
+                </li>
+                <li>Review file details in the information panel</li>
+                <li>Click <strong>"Upload Portfolio"</strong> to submit</li>
+                <li>Watch the progress bar during upload</li>
+                <li>Success message will appear when complete</li>
+                <li>Portfolio list will refresh automatically</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h3>🔧 Technical Features</h3>
+            <div class="file-info">
+                <h4>Frontend Components:</h4>
+                <ul>
+                    <li><strong>Modal Dialog:</strong> Professional overlay with close button</li>
+                    <li><strong>File Input:</strong> Hidden file input with custom styled label</li>
+                    <li><strong>Drag & Drop:</strong> Full drag-and-drop file selection</li>
+                    <li><strong>File Preview:</strong> Shows selected file details before upload</li>
+                    <li><strong>Progress Bar:</strong> Animated progress indicator</li>
+                    <li><strong>Validation:</strong> File type and size validation</li>
+                </ul>
+            </div>
+
+            <div class="file-info">
+                <h4>Backend Integration:</h4>
+                <ul>
+                    <li><strong>API Client:</strong> Uses existing <code>uploadPortfolio()</code> method</li>
+                    <li><strong>FormData:</strong> Proper multipart/form-data handling</li>
+                    <li><strong>User Context:</strong> Includes userId and strategyType</li>
+                    <li><strong>Error Handling:</strong> Comprehensive try-catch with user feedback</li>
+                    <li><strong>Auto-refresh:</strong> Portfolio list updates after successful upload</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>📱 Responsive Design</h3>
+            <p>The upload modal is fully responsive:</p>
+            <ul>
+                <li>📱 <strong>Mobile:</strong> Optimized layout for small screens</li>
+                <li>💻 <strong>Desktop:</strong> Large, comfortable upload area</li>
+                <li>📐 <strong>Adaptive:</strong> Button layout adjusts to screen size</li>
+                <li>🎨 <strong>Touch-friendly:</strong> Large touch targets on mobile devices</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>✨ User Experience Features</h3>
+            <ul>
+                <li>🎨 <strong>Visual Feedback:</strong> Color-coded states (default, hover, file selected)</li>
+                <li>⚡ <strong>Instant Preview:</strong> File details appear immediately after selection</li>
+                <li>🚫 <strong>Prevention:</strong> Can't accidentally close modal during upload</li>
+                <li>🔄 <strong>Auto-reset:</strong> Form clears automatically after successful upload</li>
+                <li>💡 <strong>Instructions:</strong> Clear guidance for users</li>
+                <li>❌ <strong>Cancel Option:</strong> Easy cancellation at any time</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>🧪 Quick Test</h3>
+            <p>Ready to test the functionality?</p>
+            <a href="http://localhost:5173/portfolio/list" target="_blank" class="demo-link">
+                🧪 Test JSON Upload Now
+            </a>
+            <p>Use the test file: <code>D:\strategy\test_portfolio.json</code></p>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('JSON Upload Test Page Loaded');
+            console.log('Ready to test the new JSON upload functionality!');
+        });
+    </script>
+</body>
+</html>

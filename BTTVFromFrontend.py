@@ -235,6 +235,119 @@ def getBtOutputJson(btParaToTest: dict) -> dict:
 def mainPage():
     return 'Hello!'
 
+# File paths for TradingView Backtest
+TBS_LONG_PATH = r"C:\Users\Calin Jasper\Downloads\input json\input tbs long.json"
+TBS_SHORT_PATH = r"C:\Users\Calin Jasper\Downloads\input json\input tbs short.json"
+PORTFOLIO_SHORT_PATH = r"C:\Users\Calin Jasper\Downloads\input json\input portfolio short.json"
+PORTFOLIO_LONG_PATH = r"C:\Users\Calin Jasper\Downloads\input json\input portfolio long.json"
+INPUT_TV_PATH = r"C:\Users\Calin Jasper\Downloads\input json\input tv.json"
+TRADINGVIEW_BACKTEST_PATH = r"C:\Users\Calin Jasper\Downloads\input json\tradingview backtest.json"
+
+@app.route('/tradingview-backtest/run', methods=['POST'])
+def run_tradingview_backtest():
+    """Run TradingView backtest using JSON files"""
+    try:
+        # Load all TradingView input files
+        files_data = {}
+        file_paths = {
+            "tbs_long": TBS_LONG_PATH,
+            "tbs_short": TBS_SHORT_PATH,
+            "portfolio_short": PORTFOLIO_SHORT_PATH,
+            "portfolio_long": PORTFOLIO_LONG_PATH,
+            "input_tv": INPUT_TV_PATH,
+            "tradingview_backtest": TRADINGVIEW_BACKTEST_PATH
+        }
+
+        missing_files = []
+        for file_name, file_path in file_paths.items():
+            if os.path.exists(file_path):
+                with open(file_path, 'r') as f:
+                    files_data[file_name] = json.load(f)
+            else:
+                missing_files.append(f"{file_name}: {file_path}")
+
+        if missing_files:
+            return {
+                "status": "error",
+                "message": f"Missing input files: {', '.join(missing_files)}"
+            }
+
+        # Combine all parameters
+        combined_params = {
+            **files_data,
+            "all_files_loaded": True
+        }
+
+        # Run backtest with combined parameters
+        return getBtOutputJson(btParaToTest=combined_params)
+
+    except Exception as e:
+        logging.error(f"Error in run_tradingview_backtest: {str(e)}")
+        return {"status": "error", "message": f"Error running TradingView backtest: {str(e)}"}
+
+@app.route('/tradingview-backtest/input', methods=['GET'])
+def get_tradingview_input():
+    """Get current input parameters for TradingView backtest"""
+    try:
+        result = {}
+        file_paths = {
+            "tbs_long": TBS_LONG_PATH,
+            "tbs_short": TBS_SHORT_PATH,
+            "portfolio_short": PORTFOLIO_SHORT_PATH,
+            "portfolio_long": PORTFOLIO_LONG_PATH,
+            "input_tv": INPUT_TV_PATH,
+            "tradingview_backtest": TRADINGVIEW_BACKTEST_PATH
+        }
+
+        for file_name, file_path in file_paths.items():
+            if os.path.exists(file_path):
+                with open(file_path, 'r') as f:
+                    result[file_name] = json.load(f)
+            else:
+                result[file_name] = {"error": f"File not found: {file_path}"}
+
+        return {"status": "success", "data": result}
+
+    except Exception as e:
+        return {"status": "error", "message": f"Error reading TradingView input files: {str(e)}"}
+
+@app.route('/tradingview-backtest/update', methods=['POST'])
+def update_tradingview_file():
+    """Update specific TradingView input file"""
+    try:
+        data = request.json
+        file_type = data.get('file_type')
+        file_content = data.get('content')
+
+        if not file_type or not file_content:
+            return {"status": "error", "message": "file_type and content are required"}
+
+        # Map file types to paths
+        file_path_map = {
+            "tbs_long": TBS_LONG_PATH,
+            "tbs_short": TBS_SHORT_PATH,
+            "portfolio_short": PORTFOLIO_SHORT_PATH,
+            "portfolio_long": PORTFOLIO_LONG_PATH,
+            "input_tv": INPUT_TV_PATH,
+            "tradingview_backtest": TRADINGVIEW_BACKTEST_PATH
+        }
+
+        if file_type not in file_path_map:
+            return {"status": "error", "message": f"Invalid file_type. Valid types: {', '.join(file_path_map.keys())}"}
+
+        file_path = file_path_map[file_type]
+
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        with open(file_path, 'w') as f:
+            json.dump(file_content, f, indent=4)
+
+        return {"status": "success", "message": f"{file_type} file updated successfully"}
+
+    except Exception as e:
+        return {"status": "error", "message": f"Error updating TradingView file: {str(e)}"}
+
 @app.route("/backtest", methods=['POST'])
 def backtest():
 

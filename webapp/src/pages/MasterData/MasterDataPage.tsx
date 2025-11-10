@@ -3,7 +3,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useApiClient } from '@hooks/useApiClient';
 import { useAlert } from '@context/AlertContext';
 import { useLoading } from '@context/LoadingContext';
-import type { MasterData, MasterDataItem, ApiResponse, PaginatedResponse } from '@types/api';
+import type { MasterData, MasterDataItem, ApiResponse, PaginatedResponse } from '@app-types/api';
 
 import './MasterDataPage.css';
 

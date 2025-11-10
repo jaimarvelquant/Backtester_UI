@@ -4,7 +4,7 @@ import { useAuth } from '@context/AuthContext';
 import { useAlert } from '@context/AlertContext';
 import { useLoading } from '@context/LoadingContext';
 import { useApiClient } from '@hooks/useApiClient';
-import type { LoginCredentials, ApiResponse, LoginResponseData } from '@types/api';
+import type { LoginCredentials, ApiResponse, LoginResponseData } from '@app-types/api';
 
 import './LoginPage.css';
 

@@ -4,7 +4,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useApiClient } from '@hooks/useApiClient';
 import { useAlert } from '@context/AlertContext';
 import { useLoading } from '@context/LoadingContext';
-import type { Portfolio, ApiResponse } from '@types/api';
+import type { Portfolio, ApiResponse } from '@app-types/api';
 import { normalizePortfolio, normalizePortfolioRunResponse } from '@utils/portfolio';
 import { downloadBlob } from '@utils/download';
 import { roundTo } from '@utils/number';

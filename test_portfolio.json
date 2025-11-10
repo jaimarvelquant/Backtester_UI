@@ -1,0 +1,85 @@
+{
+  "portfolio": {
+    "id": 0,
+    "name": "Test JSON Upload Portfolio",
+    "initial_capital": 1000000,
+    "stop_loss": {
+      "type": "NUMBERTYPE.PERCENTAGE",
+      "value": -2.0,
+      "params": {
+        "check_frequency": 60
+      }
+    },
+    "take_profit": {
+      "type": "NUMBERTYPE.PERCENTAGE",
+      "value": 3.0,
+      "params": {
+        "check_frequency": 60
+      }
+    },
+    "trailing_stop_loss": {
+      "profit_move": {
+        "type": "NUMBERTYPE.PERCENTAGE",
+        "value": 1.0
+      },
+      "stop_loss_move": {
+        "type": "NUMBERTYPE.PERCENTAGE",
+        "value": 0.5
+      }
+    },
+    "strategies": [
+      {
+        "index_base_price": 0,
+        "index_traded": "NIFTY",
+        "instrument_type": "FUTIDX",
+        "expiry_selection": {
+          "type": "EXPIRYTYPE.WEEKLY",
+          "value": 0
+        },
+        "exit_day": {
+          "type": "EXITDAY.DAY",
+          "value": 0
+        },
+        "lot_size": 75,
+        "entry": {
+          "type": "ENTRYTYPE.TIMESTRATEGY",
+          "time": "09:20",
+          "day": {
+            "type": "DAYOFWEEK.EVERYDAY"
+          }
+        },
+        "exit": {
+          "type": "EXITTYPE.TIMESTRATEGY",
+          "time": "15:15",
+          "day": {
+            "type": "DAYOFWEEK.EVERYDAY"
+          }
+        },
+        "strategy": "BUY",
+        "legs": [
+          {
+            "strike_selection": {
+              "type": "STRIKETYPE.ATM"
+            },
+            "strike": 0,
+            "call_put": "CALLPUT.CALL",
+            "action": "ACTION.BUY",
+            "ratio": 1
+          }
+        ]
+      }
+    ]
+  },
+  "slippage_percent": 0.005,
+  "start_date": 240101,
+  "end_date": 241231,
+  "broker_details": {
+    "broker": "BROKER.PAPER"
+  },
+  "exchange": "EXCHANGE.NSE",
+  "order_type": "ORDERTYPE.MARKET",
+  "product_type": "PRODUCTTYPE.NRML",
+  "fix_vix": 0,
+  "check_interval": 60,
+  "feed_source": "FEEDSOURCE.HISTORICAL"
+}

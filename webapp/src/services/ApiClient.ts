@@ -10,7 +10,7 @@
   TradingView,
   TradingViewSearchRequest,
   User
-} from '@types/api';
+} from '@app-types/api';
 
 export class ApiError<T = unknown> extends Error {
   readonly status: number;
@@ -303,6 +303,129 @@ export class ApiClient {
   runDirectTradingViewBacktest(parameters: Record<string, unknown>) {
     const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
     return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/api/tradingview/run`, {
+      method: 'POST',
+      body: JSON.stringify(parameters),
+      skipAuth: true
+    });
+  }
+
+  // Simple Backtest Service methods
+  runSimpleBacktest(parameters: Record<string, unknown>) {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/simple-backtest/run`, {
+      method: 'POST',
+      body: JSON.stringify(parameters),
+      skipAuth: true
+    });
+  }
+
+  runSimpleBacktestWithData(parameters: Record<string, unknown>) {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/simple-backtest/run-with-data`, {
+      method: 'POST',
+      body: JSON.stringify(parameters),
+      skipAuth: true
+    });
+  }
+
+  getSimpleBacktestInput() {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/simple-backtest/input`, {
+      method: 'GET',
+      skipAuth: true
+    });
+  }
+
+  getSimpleBacktestResults() {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/simple-backtest/results`, {
+      method: 'GET',
+      skipAuth: true
+    });
+  }
+
+  loadSimpleBacktestSample() {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/simple-backtest/load-sample`, {
+      method: 'POST',
+      skipAuth: true
+    });
+  }
+
+  createSimpleBacktestTemplate() {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/simple-backtest/create-template`, {
+      method: 'POST',
+      skipAuth: true
+    });
+  }
+
+  updateSimpleBacktestInput(parameters: Record<string, unknown>) {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/simple-backtest/update-input`, {
+      method: 'POST',
+      body: JSON.stringify(parameters),
+      skipAuth: true
+    });
+  }
+
+  // TradingView Backtest Service methods
+  runTradingViewBacktest(parameters: Record<string, unknown>) {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/tradingview-backtest/run`, {
+      method: 'POST',
+      body: JSON.stringify(parameters),
+      skipAuth: true
+    });
+  }
+
+  getTradingViewBacktestInput() {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/tradingview-backtest/input`, {
+      method: 'GET',
+      skipAuth: true
+    });
+  }
+
+  updateTradingViewBacktestFile(fileType: string, content: Record<string, unknown>) {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/tradingview-backtest/update`, {
+      method: 'POST',
+      body: JSON.stringify({ file_type: fileType, content }),
+      skipAuth: true
+    });
+  }
+
+  // Standard Backtest Service methods
+  runStandardBacktest(parameters: Record<string, unknown>) {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/standard-backtest/run`, {
+      method: 'POST',
+      body: JSON.stringify(parameters),
+      skipAuth: true
+    });
+  }
+
+  getStandardBacktestInput() {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/standard-backtest/input`, {
+      method: 'GET',
+      skipAuth: true
+    });
+  }
+
+  updateStandardBacktestSample(parameters: Record<string, unknown>) {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/standard-backtest/update-sample`, {
+      method: 'POST',
+      body: JSON.stringify(parameters),
+      skipAuth: true
+    });
+  }
+
+  updateStandardBacktestPortfolio(parameters: Record<string, unknown>) {
+    const DIRECT_API_BASE = import.meta.env.VITE_DIRECT_API_BASE_URL ?? 'http://localhost:5000';
+    return this.request<ApiResponse<unknown>>(`${DIRECT_API_BASE}/standard-backtest/update-portfolio`, {
       method: 'POST',
       body: JSON.stringify(parameters),
       skipAuth: true

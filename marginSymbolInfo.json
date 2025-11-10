@@ -1,0 +1,458 @@
+{
+    "SENSEX": {
+        "0": {
+            "contract": "SENSEX-13NOV25",
+            "exchange": "BFO"
+        },
+        "1": {
+            "contract": "SENSEX-20NOV25",
+            "exchange": "BFO"
+        },
+        "2": {
+            "contract": "SENSEX-27NOV25",
+            "exchange": "BFO"
+        },
+        "3": {
+            "contract": "SENSEX-04DEC25",
+            "exchange": "BFO"
+        },
+        "4": {
+            "contract": "SENSEX-11DEC25",
+            "exchange": "BFO"
+        },
+        "5": {
+            "contract": "SENSEX-18DEC25",
+            "exchange": "BFO"
+        },
+        "6": {
+            "contract": "SENSEX-24DEC25",
+            "exchange": "BFO"
+        },
+        "7": {
+            "contract": "SENSEX-29JAN26",
+            "exchange": "BFO"
+        },
+        "8": {
+            "contract": "SENSEX-26MAR26",
+            "exchange": "BFO"
+        },
+        "9": {
+            "contract": "SENSEX-25JUN26",
+            "exchange": "BFO"
+        },
+        "10": {
+            "contract": "SENSEX-24SEP26",
+            "exchange": "BFO"
+        },
+        "11": {
+            "contract": "SENSEX-31DEC26",
+            "exchange": "BFO"
+        },
+        "12": {
+            "contract": "SENSEX-24JUN27",
+            "exchange": "BFO"
+        },
+        "13": {
+            "contract": "SENSEX-30DEC27",
+            "exchange": "BFO"
+        },
+        "14": {
+            "contract": "SENSEX-29JUN28",
+            "exchange": "BFO"
+        },
+        "15": {
+            "contract": "SENSEX-28DEC28",
+            "exchange": "BFO"
+        },
+        "16": {
+            "contract": "SENSEX-28JUN29",
+            "exchange": "BFO"
+        },
+        "17": {
+            "contract": "SENSEX-27DEC29",
+            "exchange": "BFO"
+        },
+        "18": {
+            "contract": "SENSEX-27JUN30",
+            "exchange": "BFO"
+        }
+    },
+    "BANKEX": {
+        "0": {
+            "contract": "BANKEX-27NOV25",
+            "exchange": "BFO"
+        },
+        "1": {
+            "contract": "BANKEX-24DEC25",
+            "exchange": "BFO"
+        },
+        "2": {
+            "contract": "BANKEX-29JAN26",
+            "exchange": "BFO"
+        }
+    },
+    "NIFTY": {
+        "0": {
+            "contract": "NIFTY-11NOV25",
+            "exchange": "NFO"
+        },
+        "1": {
+            "contract": "NIFTY-18NOV25",
+            "exchange": "NFO"
+        },
+        "2": {
+            "contract": "NIFTY-25NOV25",
+            "exchange": "NFO"
+        },
+        "3": {
+            "contract": "NIFTY-02DEC25",
+            "exchange": "NFO"
+        },
+        "4": {
+            "contract": "NIFTY-09DEC25",
+            "exchange": "NFO"
+        },
+        "5": {
+            "contract": "NIFTY-30DEC25",
+            "exchange": "NFO"
+        },
+        "6": {
+            "contract": "NIFTY-27JAN26",
+            "exchange": "NFO"
+        },
+        "7": {
+            "contract": "NIFTY-31MAR26",
+            "exchange": "NFO"
+        },
+        "8": {
+            "contract": "NIFTY-30JUN26",
+            "exchange": "NFO"
+        },
+        "9": {
+            "contract": "NIFTY-29SEP26",
+            "exchange": "NFO"
+        },
+        "10": {
+            "contract": "NIFTY-29DEC26",
+            "exchange": "NFO"
+        },
+        "11": {
+            "contract": "NIFTY-29JUN27",
+            "exchange": "NFO"
+        },
+        "12": {
+            "contract": "NIFTY-28DEC27",
+            "exchange": "NFO"
+        },
+        "13": {
+            "contract": "NIFTY-27JUN28",
+            "exchange": "NFO"
+        },
+        "14": {
+            "contract": "NIFTY-26DEC28",
+            "exchange": "NFO"
+        },
+        "15": {
+            "contract": "NIFTY-26JUN29",
+            "exchange": "NFO"
+        },
+        "16": {
+            "contract": "NIFTY-24DEC29",
+            "exchange": "NFO"
+        },
+        "17": {
+            "contract": "NIFTY-25JUN30",
+            "exchange": "NFO"
+        }
+    },
+    "MIDCPNIFTY": {
+        "0": {
+            "contract": "MIDCPNIFTY-25NOV25",
+            "exchange": "NFO"
+        },
+        "1": {
+            "contract": "MIDCPNIFTY-30DEC25",
+            "exchange": "NFO"
+        },
+        "2": {
+            "contract": "MIDCPNIFTY-27JAN26",
+            "exchange": "NFO"
+        }
+    },
+    "FINNIFTY": {
+        "0": {
+            "contract": "FINNIFTY-25NOV25",
+            "exchange": "NFO"
+        },
+        "1": {
+            "contract": "FINNIFTY-30DEC25",
+            "exchange": "NFO"
+        },
+        "2": {
+            "contract": "FINNIFTY-27JAN26",
+            "exchange": "NFO"
+        }
+    },
+    "BANKNIFTY": {
+        "0": {
+            "contract": "BANKNIFTY-25NOV25",
+            "exchange": "NFO"
+        },
+        "1": {
+            "contract": "BANKNIFTY-30DEC25",
+            "exchange": "NFO"
+        },
+        "2": {
+            "contract": "BANKNIFTY-27JAN26",
+            "exchange": "NFO"
+        },
+        "3": {
+            "contract": "BANKNIFTY-31MAR26",
+            "exchange": "NFO"
+        },
+        "4": {
+            "contract": "BANKNIFTY-30JUN26",
+            "exchange": "NFO"
+        },
+        "5": {
+            "contract": "BANKNIFTY-29SEP26",
+            "exchange": "NFO"
+        }
+    },
+    "ZINC": {
+        "0": {
+            "contract": "ZINC-21NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "ZINC-23DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "ZINC-22JAN26",
+            "exchange": "MCX"
+        },
+        "3": {
+            "contract": "ZINC-20FEB26",
+            "exchange": "MCX"
+        }
+    },
+    "SILVERM": {
+        "0": {
+            "contract": "SILVERM-19NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "SILVERM-24DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "SILVERM-27JAN26",
+            "exchange": "MCX"
+        },
+        "3": {
+            "contract": "SILVERM-18FEB26",
+            "exchange": "MCX"
+        },
+        "4": {
+            "contract": "SILVERM-26MAR26",
+            "exchange": "MCX"
+        },
+        "5": {
+            "contract": "SILVERM-21APR26",
+            "exchange": "MCX"
+        },
+        "6": {
+            "contract": "SILVERM-26MAY26",
+            "exchange": "MCX"
+        },
+        "7": {
+            "contract": "SILVERM-19JUN26",
+            "exchange": "MCX"
+        },
+        "8": {
+            "contract": "SILVERM-28JUL26",
+            "exchange": "MCX"
+        },
+        "9": {
+            "contract": "SILVERM-24AUG26",
+            "exchange": "MCX"
+        }
+    },
+    "SILVER": {
+        "0": {
+            "contract": "SILVER-26NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "SILVER-24DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "SILVER-27JAN26",
+            "exchange": "MCX"
+        },
+        "3": {
+            "contract": "SILVER-24FEB26",
+            "exchange": "MCX"
+        },
+        "4": {
+            "contract": "SILVER-26MAR26",
+            "exchange": "MCX"
+        },
+        "5": {
+            "contract": "SILVER-24APR26",
+            "exchange": "MCX"
+        },
+        "6": {
+            "contract": "SILVER-26MAY26",
+            "exchange": "MCX"
+        },
+        "7": {
+            "contract": "SILVER-24JUN26",
+            "exchange": "MCX"
+        },
+        "8": {
+            "contract": "SILVER-28JUL26",
+            "exchange": "MCX"
+        },
+        "9": {
+            "contract": "SILVER-28AUG26",
+            "exchange": "MCX"
+        }
+    },
+    "NATURALGAS": {
+        "0": {
+            "contract": "NATURALGAS-20NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "NATURALGAS-23DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "NATURALGAS-22JAN26",
+            "exchange": "MCX"
+        }
+    },
+    "NATGASMINI": {
+        "0": {
+            "contract": "NATGASMINI-20NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "NATGASMINI-23DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "NATGASMINI-22JAN26",
+            "exchange": "MCX"
+        }
+    },
+    "GOLDM": {
+        "0": {
+            "contract": "GOLDM-28NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "GOLDM-29DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "GOLDM-29JAN26",
+            "exchange": "MCX"
+        }
+    },
+    "GOLD": {
+        "0": {
+            "contract": "GOLD-26NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "GOLD-31DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "GOLD-27JAN26",
+            "exchange": "MCX"
+        },
+        "3": {
+            "contract": "GOLD-27FEB26",
+            "exchange": "MCX"
+        },
+        "4": {
+            "contract": "GOLD-24MAR26",
+            "exchange": "MCX"
+        },
+        "5": {
+            "contract": "GOLD-30APR26",
+            "exchange": "MCX"
+        },
+        "6": {
+            "contract": "GOLD-27MAY26",
+            "exchange": "MCX"
+        },
+        "7": {
+            "contract": "GOLD-30JUN26",
+            "exchange": "MCX"
+        },
+        "8": {
+            "contract": "GOLD-29JUL26",
+            "exchange": "MCX"
+        },
+        "9": {
+            "contract": "GOLD-31AUG26",
+            "exchange": "MCX"
+        },
+        "10": {
+            "contract": "GOLD-25SEP26",
+            "exchange": "MCX"
+        }
+    },
+    "CRUDEOILM": {
+        "0": {
+            "contract": "CRUDEOILM-17NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "CRUDEOILM-16DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "CRUDEOILM-14JAN26",
+            "exchange": "MCX"
+        }
+    },
+    "CRUDEOIL": {
+        "0": {
+            "contract": "CRUDEOIL-17NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "CRUDEOIL-16DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "CRUDEOIL-14JAN26",
+            "exchange": "MCX"
+        }
+    },
+    "COPPER": {
+        "0": {
+            "contract": "COPPER-21NOV25",
+            "exchange": "MCX"
+        },
+        "1": {
+            "contract": "COPPER-23DEC25",
+            "exchange": "MCX"
+        },
+        "2": {
+            "contract": "COPPER-22JAN26",
+            "exchange": "MCX"
+        },
+        "3": {
+            "contract": "COPPER-20FEB26",
+            "exchange": "MCX"
+        }
+    }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "value": "EXP_NF_AD_STD15",
+    "label": "EXP_NF_AD_STD15 - Iron Butterfly (4 Legs)"
+  },
+  {
+    "value": "EXP_NF_AD_STD16",
+    "label": "EXP_NF_AD_STD16 - Iron Butterfly with Hedge (2 Legs)"
+  },
+  {
+    "value": "EXP_NF_AD_STD17",
+    "label": "EXP_NF_AD_STD17 - Iron Butterfly (4 Legs)"
+  },
+  {
+    "value": "EXP_NF_AD_STD18",
+    "label": "EXP_NF_AD_STD18 - Iron Butterfly with Hedge (2 Legs)"
+  },
+  {
+    "value": "EXP_NF_AD_STD19",
+    "label": "EXP_NF_AD_STD19 - Iron Butterfly (4 Legs, 4 Strike)"
+  },
+  {
+    "value": "EXP_NF_AD_STD20",
+    "label": "EXP_NF_AD_STD20 - Iron Butterfly (4 Legs, -1 Point)"
+  },
+  {
+    "value": "EXP_NF_AD_STD21",
+    "label": "EXP_NF_AD_STD21 - Iron Butterfly (4 Legs, -1 Point, 3 Strike)"
+  },
+  {
+    "value": "EXP_NF_AD_STD22",
+    "label": "EXP_NF_AD_STD22 - Iron Butterfly (4 Legs, 3 Strike)"
+  },
+  {
+    "value": "EXP_NF_AD_STD23",
+    "label": "EXP_NF_AD_STD23 - Iron Butterfly (4 Legs, 3 Strike)"
+  },
+  {
+    "value": "EXP_NF_AD_STD24",
+    "label": "EXP_NF_AD_STD24 - Iron Butterfly (4 Legs, 1 Strike)"
+  },
+  {
+    "value": "EXP_NF_ND_STD15",
+    "label": "EXP_NF_ND_STD15 - Iron Butterfly Near Delta (4 Legs)"
+  },
+  {
+    "value": "EXP_NF_ND_STD16",
+    "label": "EXP_NF_ND_STD16 - Iron Butterfly Near Delta with Hedge (2 Legs)"
+  },
+  {
+    "value": "EXP_NF_ND_STD17",
+    "label": "EXP_NF_ND_STD17 - Iron Butterfly Near Delta (4 Legs)"
+  },
+  {
+    "value": "EXP_NF_ND_STD18",
+    "label": "EXP_NF_ND_STD18 - Iron Butterfly Near Delta with Hedge (2 Legs)"
+  },
+  {
+    "value": "EXP_NF_ND_STD19",
+    "label": "EXP_NF_ND_STD19 - Iron Butterfly Near Delta (4 Legs, 4 Strike)"
+  },
+  {
+    "value": "EXP_NF_ND_STD20",
+    "label": "EXP_NF_ND_STD20 - Iron Butterfly Near Delta (4 Legs, -1 Point)"
+  },
+  {
+    "value": "EXP_NF_ND_STD21",
+    "label": "EXP_NF_ND_STD21 - Iron Butterfly Near Delta (4 Legs, -1 Point, 3 Strike)"
+  },
+  {
+    "value": "EXP_NF_ND_STD22",
+    "label": "EXP_NF_ND_STD22 - Iron Butterfly Near Delta (4 Legs, 3 Strike)"
+  },
+  {
+    "value": "EXP_NF_ND_STD23",
+    "label": "EXP_NF_ND_STD23 - Iron Butterfly Near Delta (4 Legs, 3 Strike)"
+  },
+  {
+    "value": "EXP_NF_ND_STD24",
+    "label": "EXP_NF_ND_STD24 - Iron Butterfly Near Delta (4 Legs, 1 Strike)"
+  }
+]

@@ -4,7 +4,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useApiClient } from '@hooks/useApiClient';
 import { useAlert } from '@context/AlertContext';
 import { useLoading } from '@context/LoadingContext';
-import type { TradingView, ApiResponse, PaginatedResponse } from '@types/api';
+import type { TradingView, ApiResponse, PaginatedResponse } from '@app-types/api';
 import { dateStringToLong, dateLongToDisplay } from '@utils/date';
 import { downloadBlob } from '@utils/download';
 
